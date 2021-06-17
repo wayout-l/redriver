@@ -1,0 +1,586 @@
+
+/*0 修改默认样式*/
+a,ul,li,p {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+}
+a {
+    color: inherit;
+}
+a:hover {
+    color: inherit;
+}
+    /*消除数字input后面的上下三角*/
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+input[type="number"]{
+    -moz-appearance: textfield;
+}
+button[disabled]{
+    cursor: not-allowed;
+}
+
+body {
+    color: #000000;
+    font-size: 16px;
+}
+
+/*1.布局样式*/
+.xu-row {
+    display: flex;
+    display: -ms-flexbox;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.xu-col-auto,
+.xu-col-1,.xu-col-2,.xu-col-3,.xu-col-4,.xu-col-5,.xu-col-6,
+.xu-col-7,.xu-col-8,.xu-col-9,.xu-col-10,.xu-col-11,.xu-col-12 {
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    box-sizing: border-box;
+}
+.xu-col-auto {
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    width: auto;
+    max-width: 100%;
+}
+.xu-col-1 {
+    -ms-flex: 0 0 8.333333%;
+    flex: 0 0 8.333333%;
+    max-width: 8.333333%;
+}
+.xu-col-2 {
+    -ms-flex: 0 0 16.666667%;
+    flex: 0 0 16.666667%;
+    max-width: 16.666667%;
+}
+
+.xu-col-3 {
+    -ms-flex: 0 0 25%;
+    flex: 0 0 25%;
+    max-width: 25%;
+}
+
+.xu-col-4 {
+    -ms-flex: 0 0 33.333333%;
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+}
+
+.xu-col-5 {
+    -ms-flex: 0 0 41.666667%;
+    flex: 0 0 41.666667%;
+    max-width: 41.666667%;
+}
+
+.xu-col-6 {
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+
+.xu-col-7 {
+    -ms-flex: 0 0 58.333333%;
+    flex: 0 0 58.333333%;
+    max-width: 58.333333%;
+}
+
+.xu-col-8 {
+    -ms-flex: 0 0 66.666667%;
+    flex: 0 0 66.666667%;
+    max-width: 66.666667%;
+}
+
+.xu-col-9 {
+    -ms-flex: 0 0 75%;
+    flex: 0 0 75%;
+    max-width: 75%;
+}
+
+.xu-col-10 {
+    -ms-flex: 0 0 83.333333%;
+    flex: 0 0 83.333333%;
+    max-width: 83.333333%;
+}
+
+.xu-col-11 {
+    -ms-flex: 0 0 91.666667%;
+    flex: 0 0 91.666667%;
+    max-width: 91.666667%;
+}
+
+.xu-col-12 {
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+
+/*2 容器样式*/
+.xubox {
+    border-radius: 5px;
+    border: 1px solid #dcdfe6;
+    position: relative;
+    background-color: #fefefe;
+}
+
+.xubox-title {
+    font-size: 18px;
+    color: #4d5875;
+    padding: 5px 15px 5px 15px;
+    border-bottom: 1px solid #ebeef5;
+}
+.xubox-content {
+    padding: 5px 15px 5px 15px;
+    position: relative;
+}
+.xubox-foot {
+    padding: 0 15px;
+    border-top: 1px solid #ebeef5;
+}
+
+/*3 按钮样式*/
+.xu-btn {
+    /*调节按钮字体大小为父元素一样大*/
+    font-size: 1em;
+    padding: 0.12em 0.5em;
+    border-radius: 0.3em;
+    cursor: pointer;
+}
+.xu-btn-lg {
+    font-size: 1.2em;
+    padding: 0.2em 0.8em;
+    border-radius: 0.3em;
+    cursor: pointer;
+}
+.xu-btn-sm {
+    /*调节按钮字体大小*/
+    font-size: 0.8em;
+    border: none;
+    padding: 0.1em 0.2em;
+    border-radius: 0.2em;
+    cursor: pointer;
+}
+.xu-btn:focus,
+.xu-btn-sm:focus{
+    outline: none;
+}
+.xu-btn-basic {
+    background-color: #ffffff;
+    color: #555555;
+    border: 1px solid #cccccc;
+}
+.xu-btn-basic:hover {
+
+}
+.xu-btn-primary {
+    background-color: #007bff;
+    color: #ffffff;
+    border: 1px solid  #007bff;
+}
+.xu-btn-primary:hover{
+    background-color: #006fde;
+    border: 1px solid #006fde;
+}
+.xu-btn-info {
+    background-color: #17b2c8;
+    color: #ffffff;
+    border: 1px solid  #17b2c8;
+}
+.xu-btn-info:hover {
+    background-color: #178ca2;
+    border: 1px solid  #178ca2;
+}
+.xu-btn-success {
+    background-color: #28a745;
+    color: #ffffff;
+    border: 1px solid  #28a745;
+}
+.xu-btn-success:hover{
+    background-color: #268d43;
+    border: 1px solid #268d43;
+}
+.xu-btn-cancel {
+    background-color: #e8e9ea;
+    color: #4d5875;
+    border: 1px solid  #e8e9ea;
+}
+.xu-btn-cancel:hover{
+    background-color: #dadbdc;
+    border: 1px solid #dadbdc;
+}
+
+/*4 表单样式*/
+.xu-illegal-border {
+    border: 1px solid #ed5565 !important;
+}
+.xu-illegal-text {
+    position: absolute;
+    font-size: 12px;
+    color: #ed5565;
+    right: 15px;
+}
+/*4.1文本输入框*/
+.xu-label-text {
+    /*调节输入框字体大小*/
+    /*font-size: 14px;*/
+    margin: 0;
+}
+.xu-input {
+    padding: 6px 5px 6px 5px;
+    border: 1px solid #dcdfe6;
+    border-radius: 4px;
+    /*height: 2em;*/
+    line-height: 1em;
+    font-size: 1em;
+}
+.xu-input:focus {
+    outline: none;
+    border: 1px solid #48a8ff;
+    border-radius: 4px;
+}
+.xu-textarea {
+    padding: 0.5em  0.8em;
+    border: 1px solid #dcdfe6;
+    font-size: 1em;
+    border-radius: 4px;
+    min-height: 10em;
+    vertical-align: middle;
+}
+.xu-textarea:focus {
+    outline: none;
+    border: 1px solid #48a8ff;
+    border-radius: 4px;
+}
+
+/*4.2 单选多选框*/
+.xu-label-choose {
+    /*font-size: 14px;*/
+    position: relative;
+    margin: 0;
+    height: 2em;
+    line-height: 2em;
+}
+
+.xu-choose {
+    margin: 0;
+    display: none;
+}
+/*4.2.1 单选框*/
+.xu-radio + span::before{
+    content: '';
+    height: 1em;
+    width: 1em;
+    border-radius: 50%;
+    border: 1px solid #cccccc;
+    vertical-align: -0.2em;
+    background-color: #ffffff;
+    display: inline-block;
+    margin-right: 0.2em;
+    box-sizing: border-box;
+}
+.xu-radio:checked + span::before {
+    content: '';
+    height: 1em;
+    width: 1em;
+    border: 0.3em solid #48a8ff;
+    border-radius: 50%;
+    vertical-align: -0.2em;
+    background-color: #ffffff;
+    display: inline-block;
+    margin-right: 0.2em;
+    box-sizing: border-box;
+}
+/*4.2.2 多选框*/
+.xu-checkbox + span::before{
+    content: '#';
+    height: 1em;
+    width: 1em;
+    line-height: 1em;
+    border: 1px solid #cccccc;
+    background-color: #ffffff;
+    display: inline-block;
+    color: #ffffff;
+    margin-right: 0.2em;
+    font-size: 0.8em;
+    text-align: center;
+    box-sizing: border-box;
+}
+.xu-checkbox:checked + span::before {
+    content: '\2714';
+    height: 1em;
+    width: 1em;
+    line-height: 1em;
+    border: 1px solid #48a8ff;
+    background-color: #48a8ff;
+    color: #ffffff;
+    display: inline-block;
+    margin-right: 0.2em;
+    font-size: 0.8em;
+    text-align: center;
+    box-sizing: border-box;
+}
+.xu-form-control {
+    margin: 10px 0;
+}
+/*.xu-form-control span {*/
+/*    font-size: 14px;*/
+/*}*/
+
+
+/*5 表格样式*/
+.xu-table {
+    border-collapse: collapse;
+    font-size: 14px;
+    width: 100%;
+}
+.xu-table th {
+    border-top: 1px solid #ebeef5;
+    border-bottom: 1px solid #ebeef5;
+    text-align: start;
+    font-size: 14px;
+    padding: 8px 4px;
+}
+.xu-table td {
+    /*border-top: 1px solid #ebeef5;*/
+    border-bottom: 1px solid #ebeef5;
+    padding: 8px 4px;
+}
+
+/*5.1 带边框的表格样式*/
+.xu-table-border th, .xu-table-border td{
+    border: 1px solid #ebeef5;
+}
+/*5.2 居中表格*/
+.xu-table-center td, .xu-table-center th{
+    text-align: center;
+}
+/*5.3 小表格*/
+.xu-table-sm th, .xu-table-sm td {
+    padding: 4px 2px;
+}
+/*5.4 大表格*/
+.xu-table-lg th,.xu-table-lg td {
+    padding: 12px 6px;
+    /*font-size: 16px;*/
+}
+/*5.5 悬停表格*/
+.xu-table-hover tbody tr:hover {
+    cursor: pointer;
+    background: #cccccc !important;
+}
+/*5.6 表格头部颜色*/
+.xu-thead-light tr{
+    background-color: #41cac0;
+}
+/*5.7 条纹*/
+.xu-table-strip tbody tr:nth-child(2n-1){
+    background-color: #ffffff;
+}
+.xu-table-strip tbody tr:nth-child(2n){
+    background-color: #f9f9f9;
+}
+/*5.8 固定表头表格*/
+.xu-table-fix thead{
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 0;
+}
+.xu-fix-table-wrapper {
+    position: relative;
+    overflow: auto;
+}
+
+
+/*6. 字体与颜色*/
+.xu-text-level4 {
+    font-size: 12px;
+}
+.xu-text-level3 {
+    font-size: 14px;
+}
+.xu-text-level2 {
+    font-size: 16px;
+}
+.xu-text-level1 {
+    font-size: 18px;
+}
+.xu-text-level0 {
+    font-size: 20px;
+}
+.xu-text-white-level0 {
+    color: #ffffff;
+}
+.xu-text-white-level1 {
+    color: #ebebeb;
+}
+.xu-text-dark-level0 {
+    color: #000000;
+}
+.xu-text-dark-level1 {
+    color: #4d5875;
+}
+
+/*7.滚动条样式*/
+.scrollBar-style{
+    overflow: auto;
+    -ms-scrollbar-face-color: #e3e3e3;/*IE滚动部分的颜色*/
+    -ms-scrollbar-track-color: transparent;/*IE滚动槽部分的颜色*/
+}
+    /*webkit样式*/
+.scrollBar-style::-webkit-scrollbar {/*滚动槽部分的样式*/
+    width: 3px;
+    border-radius: 1px;
+    background-color: transparent;
+}
+
+.scrollBar-style::-webkit-scrollbar-thumb{/*滚动部分的样式*/
+    background-color: #9a9a9a;
+    border-radius: 1px;
+}
+.scrollBar-style::-webkit-scrollbar-thumb:hover {
+    background-color: #808080;
+}
+
+/*8.徽章和增、删、改、查指示器*/
+.xu-badge {
+    display: inline-block;
+    padding: 0.1em 0.3em;
+    font-size: 0.7em;
+    border-radius: 999px;
+    margin: 0 0.3em;
+}
+.xu-badge-success {
+    background-color: #67c23a;
+    color: #ffffff;
+}
+.xu-badge-error {
+    background-color: #f56c6c;
+    color: #ffffff;
+}
+.xu-badge-warning {
+    background-color: #e6a23c;
+    color: #ffffff;
+}
+
+.xu-indicator {
+    display: inline-block;
+    padding: 0 0.2em;
+    font-size: 0.9em;
+    border-radius: 0.2em;
+    margin: 0 0.3em;
+    cursor: pointer;
+    line-height: 1.6em;
+}
+.xu-indicator-basic {
+    background-color: #ffffff;
+    color: #555555;
+    border: 1px solid #cccccc;
+}
+.xu-indicator-basic:hover {
+    background-color: #ededed;
+}
+.xu-indicator-add {
+     background-color: #00b590;
+     color: #ffffff;
+     border: 1px solid  #00b590;
+ }
+.xu-indicator-add:hover {
+    background-color: #00a47f;
+    border: 1px solid #00a47f;
+}
+.xu-indicator-delete {
+     background-color:#dc3545;
+     color: #ffffff;
+     border: 1px solid  #dc3545;
+ }
+.xu-indicator-delete:hover {
+    background-color: #c63242;
+    border: 1px solid #c63242;
+}
+.xu-indicator-edit {
+    background-color:#ffc107;
+    color: #ffffff;
+    border: 1px solid  #ffc107;
+}
+.xu-indicator-edit:hover {
+    background-color: #dea307;
+    border: 1px solid #dea307;
+}
+.xu-indicator-check {
+    background-color:#28a745;
+    color: #ffffff;
+    border: 1px solid  #28a745;
+}
+.xu-indicator-check:hover {
+    background-color: #228d3b;
+    border: 1px solid #228d3b;
+}
+
+/*9.动画和过渡*/
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.fadeIn {
+    animation: 300ms fadeIn;
+}
+
+/*10.背景颜色*/
+.xu-bg-white {
+    background-color: #ffffff !important;
+}
+.xu-bg-silver {
+    background-color: #eef5fd !important;
+}
+
+/*#.辅助功能*/
+.clear::after {
+    content: '';
+    clear: both;
+    display: block;
+}
+.xu-float-left {
+    float: left;
+}
+.xu-float-right {
+    float: right;
+}
+.xu-text-center {
+    text-align: center !important;
+}
+.xu-text-start {
+    text-align: start !important;
+}
+.mb-integer {
+    margin-bottom: 10px;
+}
+.mt-integer {
+    margin-top: 10px;
+}
+.ml-integer {
+    margin-left: 10px;
+}
+.mr-integer {
+    margin-right: 10px;
+}
+.min-width-1000 {
+    min-width: 1000px;
+}
